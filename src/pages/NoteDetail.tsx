@@ -60,10 +60,12 @@ const NoteDetail = () => {
           </header>
 
           {/* Cover Image */}
-          <div className="w-full h-64 md:h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl flex items-center justify-center mb-12 border border-primary/20">
-            <span className="text-9xl md:text-[12rem] animate-heartbeat">
-              {noteContent.coverEmoji}
-            </span>
+          <div className="w-full h-64 md:h-96 rounded-lg mb-12 border border-border overflow-hidden">
+            <img 
+              src="/placeholder.svg"
+              alt={noteContent.title}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Content */}

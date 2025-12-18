@@ -104,9 +104,13 @@ const About = () => {
                       : 'opacity-0 -translate-x-20'
                 }`}
               >
-                <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-2">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center border-2 border-primary/30">
-                    <span className="text-6xl md:text-8xl">{section.emoji}</span>
+                <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 p-1 overflow-hidden">
+                  <div className="w-full h-full rounded-xl bg-card border-2 border-primary/30 overflow-hidden">
+                    <img 
+                      src={`/placeholder.svg`}
+                      alt={section.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
