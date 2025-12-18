@@ -41,15 +41,17 @@ const Photos = () => {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, index) => (
+            {Array.from({ length: 12 }).map((_, index) => (
               <div 
                 key={index}
-                className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center border border-primary/20 hover:border-accent/40 transition-all duration-500 hover:scale-105 cursor-pointer animate-fade-up"
+                className="aspect-square bg-card rounded-lg border border-border hover:border-primary transition-all duration-500 hover:scale-105 cursor-pointer animate-fade-up overflow-hidden"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <span className="text-4xl md:text-5xl">
-                  {["💑", "💕", "🌹", "✨", "💜", "🥰", "💫", "💖"][index]}
-                </span>
+                <img 
+                  src="/placeholder.svg"
+                  alt={`Photo ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
