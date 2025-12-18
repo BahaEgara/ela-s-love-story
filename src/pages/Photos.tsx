@@ -1,6 +1,27 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import coupleHero from "@/assets/couple-hero.png";
+import elaPortrait from "@/assets/ela-portrait.png";
 
+// Import more photos here - add files to src/assets/:
+// import photo3 from "@/assets/photo-3.jpg";
+// import photo4 from "@/assets/photo-4.jpg";
+
+// Add your photos to this array
+const photos = [
+  coupleHero,
+  elaPortrait,
+  coupleHero,   // replace with photo3
+  elaPortrait,  // replace with photo4
+  coupleHero,
+  elaPortrait,
+  coupleHero,
+  elaPortrait,
+  coupleHero,
+  elaPortrait,
+  coupleHero,
+  elaPortrait,
+];
 const Photos = () => {
   const photoCategories = [
     { title: "Our First Date", emoji: "💜", count: 5 },
@@ -41,14 +62,14 @@ const Photos = () => {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 12 }).map((_, index) => (
+            {photos.map((photo, index) => (
               <div 
                 key={index}
                 className="aspect-square bg-card rounded-lg border border-border hover:border-primary transition-all duration-500 hover:scale-105 cursor-pointer animate-fade-up overflow-hidden"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <img 
-                  src="/placeholder.svg"
+                  src={photo}
                   alt={`Photo ${index + 1}`}
                   className="w-full h-full object-cover"
                 />

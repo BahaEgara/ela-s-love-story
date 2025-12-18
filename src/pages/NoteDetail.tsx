@@ -4,6 +4,10 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Heart, MessageCircle, Download, ArrowLeft } from "lucide-react";
 
+// Import your note cover image here:
+import coupleHero from "@/assets/couple-hero.png";
+// import noteCover from "@/assets/note-cover.png";
+
 const NoteDetail = () => {
   const { id } = useParams();
 
@@ -62,7 +66,7 @@ const NoteDetail = () => {
           {/* Cover Image */}
           <div className="w-full h-64 md:h-96 rounded-lg mb-12 border border-border overflow-hidden">
             <img 
-              src="/placeholder.svg"
+              src={coupleHero}
               alt={noteContent.title}
               className="w-full h-full object-cover"
             />
