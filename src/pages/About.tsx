@@ -3,6 +3,19 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import elaPortrait from "@/assets/ela-portrait.png";
 
+// Import your section images here - add files to src/assets/ with these names:
+// import aboutKindness from "@/assets/about-kindness.png";
+// import aboutStrength from "@/assets/about-strength.png";
+// import aboutForever from "@/assets/about-forever.png";
+
+// Add your imported images to this array (one per section)
+const sectionImages = [
+  elaPortrait,  // "My Beautiful Soul"
+  elaPortrait,  // "Your Kindness" - replace with aboutKindness
+  elaPortrait,  // "Your Strength" - replace with aboutStrength
+  elaPortrait,  // "My Forever" - replace with aboutForever
+];
+
 const About = () => {
   const [visibleSections, setVisibleSections] = useState<number[]>([]);
   const sectionRefs = useRef<HTMLDivElement[]>([]);
@@ -107,7 +120,7 @@ const About = () => {
                 <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 p-1 overflow-hidden">
                   <div className="w-full h-full rounded-xl bg-card border-2 border-primary/30 overflow-hidden">
                     <img 
-                      src={`/placeholder.svg`}
+                      src={sectionImages[index]}
                       alt={section.title}
                       className="w-full h-full object-cover"
                     />
